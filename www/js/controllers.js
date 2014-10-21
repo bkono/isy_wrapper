@@ -9,8 +9,10 @@ angular.module('starter.controllers', [])
       $cordovaTouchID.authenticate("Authorize access to the ISY page").then(function() {
         $cordovaKeychain.getForKey('isyCredentials', 'me.konowitz.isywrapper')
         .then(function(result) {
-          window.open('http://' + result + '@' + $localStorage.settings.isyAddr, '_blank',
-            'location=no,closebuttoncaption=Done,toolbar=yes');
+          var prefix = ($localStorage.settings.useSsl) ? "https://" : "http://"
+          console.log(prefix)
+          window.open(prefix + result + '@' + $localStorage.settings.isyAddr, '_blank',
+            'location=no,closebuttoncaption=Done,toolbar=yes,ignoresslerror=yes');
         }, function(err) {
           alert("Valid credentials are required. Please configure them under settings.");
         })
