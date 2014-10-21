@@ -1,0 +1,21 @@
+<ion-view title="Settings">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <ion-list>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">ISY Url</span>
+        <input type="text" ng-model="storage.settings.isyAddr" placeholder="192.168.1.100">
+      </label>
+      <ion-item nav-clear menu-close ng-click="login()">
+        Set ISY Login
+      </ion-item>
+    </ion-list>
+    <!-- <p>{{ title }}</p> -->
+    <!-- <br/> -->
+    <!-- <label>Check touchid: {{ settings.touchidText }}</label> -->
+    <!-- <button ng&#45;click="isTouchidAvail()">Check It!</button> -->
+    <!-- <button ng&#45;click="auth()">Auth it!</button> -->
+  </ion-content>
+</ion-view>
