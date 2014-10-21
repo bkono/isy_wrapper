@@ -8,14 +8,18 @@
         <span class="input-label">ISY Url</span>
         <input type="text" ng-model="storage.settings.isyAddr" placeholder="192.168.1.100">
       </label>
+      <label class="item item-toggle">
+        <span class="input-label">Use SSL?</span>
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="storage.settings.useSsl">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </label>
       <ion-item nav-clear menu-close ng-click="login()">
         Set ISY Login
       </ion-item>
     </ion-list>
-    <!-- <p>{{ title }}</p> -->
-    <!-- <br/> -->
-    <!-- <label>Check touchid: {{ settings.touchidText }}</label> -->
-    <!-- <button ng&#45;click="isTouchidAvail()">Check It!</button> -->
-    <!-- <button ng&#45;click="auth()">Auth it!</button> -->
   </ion-content>
 </ion-view>
